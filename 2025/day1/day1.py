@@ -36,10 +36,6 @@ def pt_2(d_list):
         num_spins = instr_num // 100
         zero_ctr += num_spins
 
-        # subtract num_spins from the instr_num to remove that as a factor
-        instr_num -= num_spins * 100
-
-
         if instr_dir == 'R':
             dial_pos = (dial_pos + instr_num) % 100
             if old_dial_pos > dial_pos:
