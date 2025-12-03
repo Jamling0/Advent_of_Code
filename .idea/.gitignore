@@ -1,0 +1,25 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+/2025/
+/day01/
+/aocd1_input.txt
+/example.txt
+/example_2.txt
+
+/day02/
+/aocd2_input.txt
+/example.txt
+
+/day03/
+/aocd3_input.txt
+/example.txt
+
+
+
