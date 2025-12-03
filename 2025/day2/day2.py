@@ -21,7 +21,29 @@ def part_1(d_list):
 
     return sum(invalid)
 
+def part_2(d_list):
+    invalid = []
+    for ids in d_list:
+        for num in range(ids[0], ids[1]+1):
+            str_num = str(num)
+            len_str = len(str_num)
+            for divisible in range(1, len_str // 2 + 1):
+                if len(str_num) % divisible == 0:
+                    # len_group = len(str_num) // divisible
+                    num_ptr = 0
+                    test_groups = []
+                    while num_ptr < len_str:
+                        test_groups.append(str_num[num_ptr:divisible + num_ptr])
+                        num_ptr += divisible
+                    if len(set(test_groups)) == 1:
+                        invalid.append(num)
+                        break
+
+    return sum(invalid)
+
+
 
 if __name__ == '__main__':
     print(preprocess())
     print(part_1(preprocess()))
+    print(part_2(preprocess()))
